@@ -4,21 +4,21 @@
 var dateDisplay = $('#currentDay');
 var currentDate = dayjs().format(" dddd, MMMM D, YYYY");
 var saveButton = $(".saveBtn");
-
+// Displays current date
 function displayDate(){
   $("#currentDay").text(currentDate);
 }
-
+// Saving user input and time to local storage
 $(document).ready(function () {
     saveButton.on("click", function(){
-      // var userInput = $(this).
+      
       let value = $(this).siblings(".description").val();
       let time = $(this).parent().attr('id');
       localStorage.setItem(time, value);
       console.log(time);
     })
 });
- 
+//  Comparing current time to the scheduled time on the webpage and setting each background color accordingly depending if they are past, present or future.
 function trackTime() {
   var timeNow = dayjs().hour();
   console.log(timeNow);
@@ -43,6 +43,7 @@ function trackTime() {
 
 displayDate();
 trackTime();
+// Getting time data and user input information from local storage.
 $("#hour-9 .description").val(localStorage.getItem("hour-9"));
 $("#hour-10 .description").val(localStorage.getItem("hour-10"));
 $("#hour-11 .description").val(localStorage.getItem("hour-11"));
