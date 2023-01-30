@@ -19,7 +19,7 @@ This application was developed using HTML, CSS, and Javascript as part of a clas
 
 ### Executing program
 
-* Open the web application through the following link: 
+* Open the web application through the following link:  https://lingeorge88.github.io/Scheduler-app/
 
 
 
